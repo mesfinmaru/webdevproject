@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary page meta for SEO -->
+  <title>Example Product — Short, descriptive title | Brand Name</title>
+  <meta name="description" content="Short, compelling meta description (120–155 chars) that includes primary keyword and a call-to-action.">
+  <!-- Optional, mostly ignored by search engines but sometimes used by other parsers -->
+  <meta name="keywords" content="example, product, keyword1, keyword2">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical to avoid duplicate content issues -->
+  <link rel="canonical" href="https://www.example.com/product/example-product">
+
+  <!-- Hreflang (if you have translations) -->
+  <!-- <link rel="alternate" hreflang="en" href="https://www.example.com/"> -->
+  <!-- <link rel="alternate" hreflang="fr" href="https://fr.example.com/"> -->
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Example Product — Short, descriptive title | Brand Name">
+  <meta property="og:description" content="Same or slightly longer description for social shares.">
+  <meta property="og:url" content="https://www.example.com/product/example-product">
+  <meta property="og:image" content="https://www.example.com/assets/example-product-social.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@yourbrand">
+  <meta name="twitter:title" content="Example Product — Brand Name">
+  <meta name="twitter:description" content="Short description for Twitter cards.">
+  <meta name="twitter:image" content="https://www.example.com/assets/example-product-social.jpg">
+
+  <!-- Preconnect / preload to improve performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="/styles/main.css" as="style">
+  <link rel="stylesheet" href="/styles/main.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/styles/main.css"></noscript>
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Example Product",
+    "image": "https://www.example.com/assets/example-product.jpg",
+    "description": "A concise product description optimized for users and search engines.",
+    "sku": "EX-12345",
+    "mpn": "12345",
+    "brand": {
+      "@type": "Brand",
+      "name": "Brand Name"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.example.com/product/example-product",
+      "priceCurrency": "USD",
+      "price": "29.99",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- Accessibility & performance best-practices: minimal critical CSS inline (example) -->
+  <style>
+    /* Critical above-the-fold CSS (keep tiny) */
+    html { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    body { margin: 0; line-height: 1.4; color: #111; }
+    header, nav, main, footer { display: block; }
+  </style>
+</head>
+<body>
+  <header aria-label="Main header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="Brand Name home">Brand Name</a>
+      <nav aria-label="Primary Navigation">
+        <ul>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article itemscope itemtype="https://schema.org/Product">
+      <header>
+        <h1 itemprop="name">Example Product — Short Unique Title</h1>
+        <p class="eyebrow">In-category: <a href="/category/example">Example Category</a></p>
+      </header>
+
+      <section class="product-hero">
+        <figure>
+          <img src="/assets/example-product.jpg" alt="Example Product front view" loading="lazy" width="1200" height="800" itemprop="image">
+          <figcaption>Example Product — helpful caption with keyword.</figcaption>
+        </figure>
+
+        <div class="product-summary">
+          <p itemprop="description">A user-friendly opening paragraph that includes the primary keyword once, explains benefits, and encourages action.</p>
+          <p><strong itemprop="offers" itemscope itemtype="https://schema.org/Offer">Price: <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price">29.99</span></strong></p>
+          <a href="/cart/add?product=EX-12345" class="btn-primary" rel="nofollow">Buy now</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Key features</h2>
+        <ul>
+          <li>Feature one — describes real benefit.</li>
+          <li>Feature two — include related keyword variations naturally.</li>
+          <li>Feature three — short, scannable bullet points.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Detailed description</h2>
+        <p>Longer content (300+ words ideally for product pages) that answers user questions, includes semantic headings, internal links to related content, and naturally incorporates synonyms of the target keyword.</p>
+      </section>
+
+      <section>
+        <h2>Frequently asked questions</h2>
+        <div itemscope itemtype="https://schema.org/FAQPage">
+          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How does Example Product work?</h3>
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+              <p itemprop="text">Short helpful answer that addresses intent and uses a natural language style &ndash; good for featured snippets.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <nav aria-label="Footer Navigation">
+      <ul>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/sitemap.xml">Sitemap</a></li>
+      </ul>
+    </nav>
+    <p>&copy; <time datetime="2025">2025</time> Brand Name</p>
+  </footer>
+
+  <!-- Defer non-critical scripts for performance -->
+  <script defer>
+    // Minimal JS to enhance UX. Keep content accessible without JS.
+    document.documentElement.classList.add('js-is-enabled');
+  </script>
+
+  <!-- Example analytics snippet (consent required in many regions) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script> -->
+
+</body>
+</html>

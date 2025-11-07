@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Classes</title>
+</head>
+<body>
+
+  <h1>IP Classes</h1>
+
+  <form action="https://formspree.io/f/mldogdoy" method="post">
+    <label for="favcolor">Select your favorite color:</label><br>
+    <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+    <input type="submit" value="Submit Color">
+  </form>
+
+  <hr>
+  
+  <form action="https://formspree.io/f/mldogdoy" method="post">
+    <label for="myfile">Upload your profile picture:</label><br>
+    <input type="file" id="myfile" name="myfile"><br><br>
+    <input type="submit" value="Upload File">
+  </form>
+
+  <hr>
+  
+  <p>Select an image to upload:</p>
+  <input type="file" accept="image/*">
+
+  <hr>
+
+  <label for="cars">Choose your favorite car brand:</label><br>
+  <select name="cars" id="cars">
+    <optgroup label="Swedish Cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </optgroup>
+  </select>
+
+  <hr>
+
+  <label for="browser">Choose your web browser:</label><br>
+  <input list="browsers" name="browser" id="browser">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+
+  <hr>
+  
+  <form action="https://formspree.io/f/mldogdoy" method="post">
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="Hana"><br><br>
+
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Sisay"><br><br>
+
+      <input type="submit" value="Submit Info">
+    </fieldset>
+  </form>
+
+  <hr>
+
+  <figure>
+  <img src="dbuicon.png" alt=" DebreBerhan unversity logo" width="80%">
+  <figcaption>Fig1. DebreBerhan University Logo.</figcaption>
+</figure>
+
+<hr>
+
+<canvas id="myCanvas" width="200" height="200">This is my canavas</canvas>
+<script>
+const canvas = document.getElementById("myCanvas");
+const context = canvas.getContext("2d");
+context.beginPath();
+context.arc(150,100,50,0,2*Math.PI); 
+context.fillStyle ="#4bc4d9"
+context.fill();
+context.stroke();
+</script>
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="red" stroke-width="4" fill="green" />
+</svg>
+
+ <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="1" cy="50" r="50" style="fill:rgb(97, 206, 146);">
+    <animate attributeName="cx" begin="0s"dur="1s" from="0%" to="110%"
+      repeatCount="indefinite" />
+  </circle>
+ </svg>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>What is your return policy?</summary>
+    <p>We accept returns within 30 days of purchase with a valid receipt.</p>
+  </details>
+
+  <details>
+    <summary>Do you offer free shipping?</summary>
+    <p>Yes, we provide free shipping on orders over $50.</p>
+  </details>
+
+</body>
+</html>
